@@ -230,21 +230,20 @@ PUT /authors/1
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "JSON object with a message property set to author updated successfully and an updateAuthors property containing the details of the updated Author",
 
 }
-```
 ```
 
 #### Error Response
 
 If the author is not found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Author not found"
 }
@@ -260,14 +259,14 @@ Deletes an author.
 
 #### Request
 
-```http
+
 DELETE /authors/1
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "Author deleted"
 }
@@ -277,8 +276,8 @@ Status: 200 OK
 
 If the author is not found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Author not found"
 }
@@ -286,8 +285,8 @@ Status: 404 Not Found
 
 If deleting the author fails:
 
+Status: `500 Internal Server Error`
 ```json
-Status: 500 Internal Server Error
 {
   "message": "Failed to delete Author"
 }
@@ -306,14 +305,14 @@ Retrieves a list of all bookstores.
 
 #### Request
 
-```http
+
 GET /bookstores
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "JSON array containing all Bookstores"
 }
@@ -323,8 +322,8 @@ Status: 200 OK
 
 If no bookstores are found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Bookstores not found"
 }
@@ -340,14 +339,14 @@ Retrieves a single bookstore by its ID.
 
 #### Request
 
-```http
+
 GET /bookstores/1
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "JSON object representing the Bookstore"
 }
@@ -357,8 +356,8 @@ Status: 200 OK
 
 If the bookstore is not found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Bookstore not found"
 }
@@ -374,20 +373,14 @@ Adds a new bookstore.
 
 #### Request
 
-```http
-POST /bookstores
-Content-Type: application/json
 
-{
-  "name": "Bookstore 3",
-  "location": "Location 3"
-}
-```
+POST /bookstores
+
 
 #### Response
-
+Status: `201 Created`
 ```json
-Status: 201 Created
+
 {
   "message": "JSON object with a message property set to New Bookstore created successfully and a createBookstore property containing the details of the created Bookstore"
 }
@@ -397,8 +390,8 @@ Status: 201 Created
 
 If adding the bookstore fails:
 
+Status: `500 Internal Server Error`
 ```json
-Status: 500 Internal Server Error
 {
   "message": "Failed to add bookstore"
 }
@@ -414,14 +407,14 @@ Updates an existing bookstore.
 
 #### Request
 
-```http
+
 PUT /bookstores/1
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "JSON object with a message property set to bookstore updated successfully and an updatebookstore property containing the details of the updated bookstore",
 
@@ -432,8 +425,8 @@ Status: 200 OK
 
 If the bookstore is not found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Bookstore not found"
 }
@@ -449,14 +442,14 @@ Deletes a bookstore.
 
 #### Request
 
-```http
+
 DELETE /bookstores/1
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "Bookstore deleted"
 }
@@ -466,8 +459,8 @@ Status: 200 OK
 
 If the bookstore is not found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Bookstore not found"
 }
@@ -475,8 +468,8 @@ Status: 404 Not Found
 
 If deleting the bookstore fails:
 
+Status: `500 Internal Server Error`
 ```json
-Status: 500 Internal Server Error
 {
   "message": "Failed to delete bookstore"
 }
@@ -484,7 +477,6 @@ Status: 500 Internal Server Error
 
 ## Book Routes Documentation
 
-This documentation provides a summary of the routes available for managing books in an application. The routes are implemented using Express.js and Prisma ORM.
 
 ### Get All Books
 
@@ -496,14 +488,14 @@ Retrieves a list of all books.
 
 #### Request
 
-```http
+
 GET /books
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "JSON array containing all books"
 }
@@ -513,8 +505,8 @@ Status: 200 OK
 
 If no books are found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Books not found"
 }
@@ -530,14 +522,14 @@ Retrieves a single book by its ID.
 
 #### Request
 
-```http
+
 GET /books/1
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "JSON object representing the book"
 }
@@ -547,8 +539,8 @@ Status: 200 OK
 
 If the book is not found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Book not found"
 }
@@ -564,14 +556,14 @@ Adds a new book.
 
 #### Request
 
-```http
+
 POST /books
-```
+
 
 #### Response
 
+Status: `201 Created`
 ```json
-Status: 201 Created
 {
   "message": "JSON object with a message property set to New Book created successfully and a createBook property containing the details of the created book"
 }
@@ -581,8 +573,8 @@ Status: 201 Created
 
 If adding the book fails:
 
+Status: `500 Internal Server Error`
 ```json
-Status: 500 Internal Server Error
 {
   "message": "Failed to add book"
 }
@@ -598,14 +590,14 @@ Updates an existing book.
 
 #### Request
 
-```http
+
 PUT /books/1
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "JSON object with a message property set to Book updated successfully and an updateBook property containing the details of the updated book",
 
@@ -616,8 +608,8 @@ Status: 200 OK
 
 If the book is not found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Book not found"
 }
@@ -633,14 +625,14 @@ Deletes a book.
 
 #### Request
 
-```http
+
 DELETE /books/1
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "Book deleted"
 }
@@ -650,8 +642,8 @@ Status: 200 OK
 
 If the book is not found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Book not found"
 }

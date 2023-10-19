@@ -122,14 +122,14 @@ Retrieves a list of all authors.
 
 #### Request
 
-```http
+
 GET /authors
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "JSON array containing all authors"
 }
@@ -139,8 +139,8 @@ Status: 200 OK
 
 If no authors are found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "error": "No authors found"
 }
@@ -152,18 +152,18 @@ Status: 404 Not Found
 - Endpoint: `/authors/:id`
 - Authentication: Required
 
-Retrieves a single author by their ID.
+Retrieves a single author by their ID.f8
 
 #### Request
 
-```http
+
 GET /authors/1
-```
+
 
 #### Response
 
+Status: `200 OK`
 ```json
-Status: 200 OK
 {
   "message": "JSON object representing the author"
 }
@@ -173,8 +173,8 @@ Status: 200 OK
 
 If the author is not found:
 
+Status: `404 Not Found`
 ```json
-Status: 404 Not Found
 {
   "message": "Author not found"
 }
@@ -190,20 +190,14 @@ Adds a new author.
 
 #### Request
 
-```http
-POST /authors
-Content-Type: application/json
 
-{
-  "name": "John Doe",
-  "email": "john.doe@example.com"
-}
-```
+POST /authors
+
 
 #### Response
 
+Status: `201 Created`
 ```json
-Status: 201 Created
 {
   "message": "JSON object with a message property set to New Author created successfully and a createAuthor property containing the details of the created Author"
 }
@@ -213,8 +207,8 @@ Status: 201 Created
 
 If adding the author fails:
 
+Status: `500 Internal Server Error`
 ```json
-Status: 500 Internal Server Error
 {
   "message": "Failed to add Author"
 }
@@ -230,9 +224,9 @@ Updates an existing author.
 
 #### Request
 
-```http
+
 PUT /authors/1
-```
+
 
 #### Response
 

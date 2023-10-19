@@ -664,9 +664,8 @@ Status: 404 Not Found
 ```
 
 If deleting the book fails:
-
-```json
 Status: 500 Internal Server Error
+```json
 {
   "message": "Failed to delete book"
 }
